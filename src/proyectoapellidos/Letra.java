@@ -15,9 +15,10 @@ public class Letra {
         // init consonantes
         for (int i = 98; i <= 122; i++) {
             // si no es una vocal
-            if (i != 101 && i != 105 && i != 111 && i != 117) { 
-                if((char) i != 'x' && (char) i != 'w')
+            if (i != 101 && i != 105 && i != 111 && i != 117) {
+                if ((char) i != 'x' && (char) i != 'w') {
                     Letra.CONSONANTES.add(String.valueOf((char) i));
+                }
             }
         }
     }
@@ -47,7 +48,16 @@ public class Letra {
                         apellido.append("h");
                     }
                     break;
-                default:
+                case "d":
+                    if (r.nextBoolean()) {
+                        apellido.append("r");
+                    }
+                    break;
+                    
+                case "p":
+                    if (r.nextBoolean()) {
+                        apellido.append("r");
+                    }
                     break;
             }
 
@@ -58,16 +68,16 @@ public class Letra {
                 case "u":
                     if (r.nextBoolean()) {
                         apellido.append("i");
-                    }else if(r.nextBoolean()){
+                    } else if (r.nextBoolean()) {
                         apellido.append("e");
                     }
                     break;
                 case "i":
                     if (r.nextBoolean()) {
                         apellido.append("a");
-                    }else if(r.nextBoolean()){
+                    } else if (r.nextBoolean()) {
                         apellido.append("e");
-                    }else if(r.nextBoolean()){
+                    } else if (r.nextBoolean()) {
                         apellido.append("o");
                     }
                     break;
